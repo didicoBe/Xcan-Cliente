@@ -1,0 +1,47 @@
+.iconeLoginTopo{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.barratop{
+    position: fixed;
+    top: 57px;
+    height: 60px;
+    background-color: #69131d;
+    width: 100%;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+.iconesBarraEsquerda{
+    font-size: 20px;
+    margin-right: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.iconesBarraCategoria{
+    font-size: 12px;
+    color: #00f200;
+    margin-right: 5px;
+    
+}
+.barraCat{
+    margin-right: 45px;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btnRegistrar{
+    background-color: #332123 !important;
+    border: 0px !important;
+    font-size: 13px !important;
+    margin-left: 15px;
+    color:#ffe400 !important
+}
+.iconeBarraViews{
+    font-size: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+}
