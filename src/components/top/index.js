@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Navbar} from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { Link } from "react-router-dom";
 import './style.css'
 
 class index extends Component {
@@ -13,10 +14,10 @@ class index extends Component {
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
-                            <a href="#login" style={{color:'#fff'}}>
+                            <Link to="/login" style={{color:'#fff'}}>
                                 Entrar
                                 <FontAwesomeIcon icon={faUser} color="white" className={ "iconeLoginTopo"}/>                                
-                            </a>
+                            </Link>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Navbar>                  

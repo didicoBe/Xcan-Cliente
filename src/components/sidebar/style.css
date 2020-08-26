@@ -7,4 +7,12 @@
     z-index: -9;
     padding: 15px;
     width: 250px;
+    left: 0px;
+}
+.tituloFiltro{
+    font-size: 20px;
+}
+.subtituloFiltro{
+    font-size: 15px;
+    margin-top: 15px;
 }
