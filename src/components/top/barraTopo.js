@@ -35,9 +35,9 @@ class BarraTopo extends Component {
                     </Col>
                     <Col md={5}>
                         <div style={{float:'right',display:'flex',alignContent:'center',alignItems:'center'}}>
-                            <FontAwesomeIcon icon={faGripLines} color="white" className={ "iconeBarraViews"}/>
-                            <FontAwesomeIcon icon={faThLarge} color="white" className={ "iconeBarraViews"}/>
-                            <FontAwesomeIcon icon={faTh} color="white" className={ "iconeBarraViews"}/>
+                            <FontAwesomeIcon icon={faGripLines} color="white" onClick={this.props.linha} className={ "iconeBarraViews"}/>
+                            <FontAwesomeIcon icon={faThLarge} color="white" onClick={this.props.tres} className={ "iconeBarraViews"}/>
+                            <FontAwesomeIcon icon={faTh} color="white" onClick={this.props.cinco} className={ "iconeBarraViews"}/>
                             <Button className='btnRegistrar'>Registrar</Button>
                         </div>
                     </Col>
