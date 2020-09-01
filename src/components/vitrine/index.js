@@ -2,8 +2,17 @@ import React, { Component } from 'react'
 import {Image,Card,Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart,faStar,faDotCircle } from '@fortawesome/free-solid-svg-icons'
+import  { Redirect } from 'react-router-dom'
+
 
 export default class index extends Component {
+
+    vai = (link)=>{
+        this.props.history.push('/perfil/'+link)
+
+    }
+
+
     render() {
         return (
             <div style={{color:'#fff',display:'block',marginTop:15,position:'relative',maxWidth:500}}>
@@ -12,7 +21,7 @@ export default class index extends Component {
                 </div>
                 <div style={{position:'absolute',zIndex:9,bottom:0,width:'100%'}}>
                     <div style={{backgroundColor:'#1d1c1cbd',padding:15,display:'flex',justifyContent:'space-between'}}>
-                        <div>Nome Garota</div>
+                        <div onClick={()=>{this.vai(this.props.link)}} style={{cursor:'pointer'}}>Nome Garota</div>
                         <div>
                             <FontAwesomeIcon icon={faHeart} color="white" className={ "iconeLoginTopo"} style={{cursor:'pointer'}}/>   
                             <FontAwesomeIcon icon={faStar} color="white" className={ "iconeLoginTopo"} style={{cursor:'pointer'}}/> 

@@ -1,0 +1,43 @@
+.avatar{
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: top center;
+  margin: 25px;
+}
+
+.nomePerfil{
+    color:#fff;
+    font-size: 30px;
+    margin-left: 55px;  
+    text-transform: capitalize;
+}
+
+.itensPerfil{
+    color:#fff;
+    margin-left: 55px;
+    cursor: pointer;
+}
+.btnPrivado{
+    background-color: #3c3c3c !important;
+    border: 0px !important;
+    font-size: 13px !important;
+    margin-left: 15px;
+    color:#ffe400 !important;
+    margin-left: 55px;
+    margin-top:10px;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.subtituloPerfil{
+    color:#fff;
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top: 55px;
+    margin-bottom: 15px;
+}

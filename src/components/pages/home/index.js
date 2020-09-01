@@ -29,16 +29,33 @@ class index extends Component {
                         <div style={{width:'100%',marginLeft:250}}>
                             <Row>
                                 <Col md={this.state.grid}>
-                                    <Vitrine video="https://i.gifer.com/Dmde.gif"/>
+                                    <Vitrine 
+                                        video="https://i.gifer.com/Dmde.gif"
+                                        link='garota1'
+                                        history= {this.props.history}
+                                        
+                                    />
                                 </Col>
                                 <Col md={this.state.grid}>
-                                    <Vitrine video="https://i.gifer.com/Dmde.gif"/>
+                                    <Vitrine 
+                                        video="https://i.gifer.com/Dmde.gif"
+                                        link='garota2'
+                                        history= {this.props.history}
+                                    />
                                 </Col>
                                 <Col md={this.state.grid}>
-                                    <Vitrine video="https://i.gifer.com/Dmde.gif"/>
+                                    <Vitrine 
+                                        video="https://i.gifer.com/Dmde.gif"
+                                        link='garota3'
+                                        history= {this.props.history}
+                                    />
                                 </Col>
                                 <Col md={this.state.grid}>
-                                    <Vitrine video="https://i.gifer.com/Dmde.gif"/>
+                                    <Vitrine 
+                                        video="https://i.gifer.com/Dmde.gif"
+                                        link='garota4'
+                                        history= {this.props.history}
+                                    />
                                 </Col>
                                 <Col md={this.state.grid}>
                                     <Vitrine video="https://steamuserimages-a.akamaihd.net/ugc/98349963198956412/BFBADC9EF422B1C5EC2CE04D047F560D86EB6097/"/>

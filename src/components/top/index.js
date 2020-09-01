@@ -10,7 +10,7 @@ class index extends Component {
         return (
             <div>
                 <Navbar style={{backgroundColor:'#69131d'}} fixed="top">
-                    <Navbar.Brand href="#home" style={{color:'#fff',fontSize:25}}>Logo</Navbar.Brand>
+                    <Navbar.Brand href="/" style={{color:'#fff',fontSize:25}}>Logo</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>

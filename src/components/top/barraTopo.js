@@ -6,6 +6,18 @@ import { faStar,faHeart,faMobileAlt, faChartLine,faCircleNotch, faGripLines, faT
 import './style.css'
 
 class BarraTopo extends Component {
+    state={
+        esconde: '',
+        perfil:''
+    }
+
+    componentDidMount(){
+        if(this.props.esconde == 'sim')
+        this.setState({
+            esconde:'none',
+            
+        })
+    }
     render() {
         return (
             <div className={'barratop'}>
@@ -34,10 +46,10 @@ class BarraTopo extends Component {
                         
                     </Col>
                     <Col md={5}>
-                        <div style={{float:'right',display:'flex',alignContent:'center',alignItems:'center'}}>
-                            <FontAwesomeIcon icon={faGripLines} color="white" onClick={this.props.linha} className={ "iconeBarraViews"}/>
-                            <FontAwesomeIcon icon={faThLarge} color="white" onClick={this.props.tres} className={ "iconeBarraViews"}/>
-                            <FontAwesomeIcon icon={faTh} color="white" onClick={this.props.cinco} className={ "iconeBarraViews"}/>
+                        <div style={{float:'right',display:'flex',alignContent:'center',alignItems:'center',}}>
+                            <FontAwesomeIcon icon={faGripLines} color="white" style={{display:this.state.esconde}} onClick={this.props.linha} className={ "iconeBarraViews"}/>
+                            <FontAwesomeIcon icon={faThLarge} color="white" style={{display:this.state.esconde}} onClick={this.props.tres} className={ "iconeBarraViews"}/>
+                            <FontAwesomeIcon icon={faTh} color="white" style={{display:this.state.esconde}} onClick={this.props.cinco} className={ "iconeBarraViews"}/>
                             <Button className='btnRegistrar'>Registrar</Button>
                         </div>
                     </Col>
