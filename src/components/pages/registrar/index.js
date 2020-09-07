@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {Form,Button,Col, Row } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import './style.css'
-class index extends Component {
+class Registrar extends Component {
     render() {
         return (
             <div className='loginp'>
@@ -10,24 +9,26 @@ class index extends Component {
                     <div style={{fontSize:30,textAlign:'center',marginBottom:15}}>
                         <Link to="/" style={{color:'#fff',textDecoration:'none'}}>Logo</Link>
                     </div>
-                    <div className='caixaLogin'>
-                        <div style={{fontSize:25,marginBottom:15}}>Login</div>
+                    <div className='caixaLogin' style={{height:360}}>
+                        <div style={{fontSize:25,marginBottom:15}}>Cadastro</div>
                         <Form >
                             <Form.Group controlId="formBasicEmail"  >
-                                <Form.Control type="email" placeholder="Usuario" />
+                                <Form.Control type="text" placeholder="Nome de usuario" />
                             </Form.Group>
-
+                            <Form.Group controlId="formBasicEmail"  >
+                                <Form.Control type="email" placeholder="Seu E-mail" />
+                            </Form.Group>
                             <Form.Group controlId="formBasicPassword" >
                                 <Form.Control type="password" placeholder="senha" />
                             </Form.Group>
+                            <Form.Group controlId="formBasicCheckbox">
+                                <Form.Check type="checkbox" label="Confirmo que tenho mais de 18 anos e aceito os termos" />
+                            </Form.Group>
                             <Button variant="dark" type="submit" className='float-right'>
-                                Entrar
+                                Registrar
                             </Button>
                             <br/>
-                            <div className='criar'>
-                                <Link to="/registro" style={{color:'#fff'}}>Criar conta</Link>
-                                <Link to="/esqueci" style={{color:'#fff'}}>Esqueci minha senha</Link>
-                            </div>
+                            
                         </Form>
                     </div>
                 </div>
@@ -37,4 +38,4 @@ class index extends Component {
     }
 }
 
-export default index;
+export default Registrar;

@@ -1,0 +1,45 @@
+.chat{
+    height: 350px;
+    width: 300px;
+    position: fixed;
+    background-color: #aba9a9d1;
+    bottom: 0px;
+    right: 10px;
+    z-index: 999999;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.boxConversa{
+    background-color: #5e5d5d;
+    margin: 15px;
+    border-radius: 10px;
+    height: 250px;
+    padding: 15px;
+    color: #fff;
+    overflow: auto;
+}
+.enviar{
+    padding: 15px;
+    margin-top: -15px;
+}
+.botoesenviar{
+    margin-left: -15px;
+}
+@media only screen and (max-width: 600px) {
+    .chat{
+        height: 400px;
+        width: 100%;
+        position: fixed;
+        background-color: #aba9a9;
+        bottom: 0px;
+        right: 0px;
+        margin-left: 15px;
+        z-index: 999999;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    .botoesenviar{
+        margin-left: 0px;
+        float: right;
+    }
+}

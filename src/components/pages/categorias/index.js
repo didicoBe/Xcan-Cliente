@@ -7,10 +7,16 @@ import {Container,Card,Col, Row } from 'react-bootstrap';
 
 import './style.css'
 
-class index extends Component {
+class Categorias extends Component {
     state = {
-        grid:3
+        grid:3,
+        perfil:this.props.match.params.nome
     }
+
+    componentDidMount(){
+        alert(this.state.perfil)
+    }
+
 
 
     render() {
@@ -22,6 +28,7 @@ class index extends Component {
                     tres={()=>this.setState({grid:5})}
                     cinco={()=>this.setState({grid:3})}
                 />
+                
                 <Container fluid className="corpo">
                     <div style={{display:'flex'}}>
                         <Sidebar/>
@@ -112,9 +119,10 @@ class index extends Component {
                     
                     
                 </Container>
+                
             </div>
         );
     }
 }
 
-export default index;
+export default Categorias;

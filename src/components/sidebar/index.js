@@ -8,7 +8,7 @@ import './style.css'
 class index extends Component {
     render() {
         return (
-            <div className="sidebar">
+            <div className="sidebar d-none d-md-block">
                 <Row>
                     <Col>
                         <InputGroup className="mb-3">

@@ -41,3 +41,32 @@
     margin-top: 55px;
     margin-bottom: 15px;
 }
+
+.NomeMobi{
+    display: inline-flex;
+    justify-content: flex-end;
+    position: absolute;
+    left: 140px;
+    top: 30px;
+}
+.estiloLateral{
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+}
+@media only screen and (max-width: 600px) {
+    .avatar{
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+        float: left;
+    }
+    .btnPrivado{
+        margin-top: 0px;
+        margin-left: 10px;
+        width: 100px;
+    }
+    .estiloLateral{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+}
