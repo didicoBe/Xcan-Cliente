@@ -6,6 +6,75 @@ import { Link } from "react-router-dom";
 import './style.css'
 
 class index extends Component {
+
+    state={
+        idade:[
+            {
+                nome:'18',
+                link:'18'
+            },
+            {
+                nome:'22',
+                link:'22'
+            },
+            {
+                nome:'37',
+                link:'37'
+            },
+            {
+                nome:'50',
+                link:'50'
+            },
+            {
+                nome:'60',
+                link:'60'
+            },
+            {
+                nome:'70',
+                link:'70'
+            },
+
+        ],
+        categoria:[
+            {
+                nome:'loira'
+            },
+            {
+                nome:'Morena'
+            },
+            {
+                nome:'Ruiva'
+            },
+            {
+                nome:'Asiatica'
+            },
+            {
+                nome:'Preta'
+            },
+            {
+                nome:'Parda'
+            },
+        ],
+        tipo:[
+            {
+                nome:'Madura'
+            },
+            {
+                nome:'BBW'
+            },
+            {
+                nome:'Milf'
+            },
+            {
+                nome:'Lesbicas'
+            },
+            {
+                nome:'Squirting'
+            },
+        ]
+    }
+
+
     render() {
         return (
             <div className="sidebar d-none d-md-block">
@@ -34,93 +103,50 @@ class index extends Component {
                 <Row>
                     <Col>
                         <div className="subtituloFiltro">Idade</div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> 18
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> 18
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> 18
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> 18
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> 18
-                            </Link>                            
-                        </div>
-
+                        {this.state.idade.map((dados,i)=>{
+                            return(
+                                <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
+                                    <Link to={"/filtro/" + dados.link} style={{textDecoration:'none',color:'#fff'}}>
+                                        <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> {dados.nome}
+                                    </Link>                            
+                                </div>
+                            )
+                        })}
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <div className="subtituloFiltro">Categoria</div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
+                        {
+                            this.state.categoria.map((dados,i)=>{
+                                return(
+                                    <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
+                                        <Link to={"/filtro/" + dados.nome} style={{textDecoration:'none',color:'#fff'}}>
+                                            <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> {dados.nome}
+                                        </Link>                            
+                                    </div>    
+                                )
+                            })
+                        }
+
 
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <div className="subtituloFiltro">Tipo</div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
-                        <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
-                            <Link to="#" style={{textDecoration:'none',color:'#fff'}}>
-                                <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> Loren ipsum
-                            </Link>                            
-                        </div>
+                        {
+                            this.state.tipo.map((dados,i)=>{
+                                return(
+                                    <div style={{display:'flex', alignContent:'center', alignItems:'center'}}>
+                                        <Link to={"/filtro/" + dados.nome} style={{textDecoration:'none',color:'#fff'}}>
+                                            <FontAwesomeIcon icon={faCircle} color="white" style={{fontSize:13,marginLeft:10, marginRight:15}}/> {dados.nome}
+                                        </Link>                            
+                                    </div>    
+                                )
+                            })
+                        }
+
 
                     </Col>
                 </Row>

@@ -7,6 +7,8 @@ import Categorias from "./components/pages/categorias";
 import Registrar from "./components/pages/registrar";
 import Esqueci from "./components/pages/login/esqueci";
 import Privado from "./components/pages/privado";
+import Dash from "./components/pages/login/dash/dash";
+import Filtro from "./components/pages/filtro";
 
 
 
@@ -21,6 +23,8 @@ const Routes = ()=>(
                 <Route path="/registro" component={Registrar}></Route> 
                 <Route path="/esqueci" component={Esqueci}></Route> 
                 <Route path="/privado/:id" component={Privado}></Route> 
+                <Route path="/dash" component={Dash}></Route> 
+                <Route path="/filtro/:valor" component={Filtro}></Route> 
             </Switch>
         </BrowserRouter>
     </div>

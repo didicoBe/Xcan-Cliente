@@ -20,7 +20,7 @@
       width: 100%;
       margin-left: -15px;
       height: 60px;
-      position: absolute; 
+      position: fixed; 
       bottom: 0px;
       z-index: 99999;
   }
@@ -39,6 +39,11 @@
     font-weight: 400;
     border: 1px solid;
     cursor: pointer;
+    text-align: center;
+    float: right;
+  }
+  .btnsAction{
+    display: none;
   }
 
   @media only screen and (max-width: 600px) {
@@ -68,5 +73,12 @@
         position: relative; 
         top:-68px;
         z-index: 99999;
+    }
+    .btnsAction{
+      display: block;
+      display: block;
+      margin-top: -60px;
+      color: #fff;
+      width: 100%;
     }
   }

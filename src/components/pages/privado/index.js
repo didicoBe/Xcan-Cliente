@@ -28,7 +28,7 @@ export default class Privado extends Component {
                     <div className="barraMedia">
                         <div className="btnsMedia">
                             <FontAwesomeIcon icon={faStopCircle} color="white" style={{marginRight:15,fontSize:35,cursor:'pointer'}}/>
-                            <div className="btnsMedia d-none d-md-block">
+                            <div className="d-none d-md-block">
                                 <FontAwesomeIcon icon={faWallet} color="#ffe400" style={{marginLeft:60,marginRight:25,fontSize:35,cursor:'pointer'}}/>
                                 <FontAwesomeIcon icon={faGift} color="#ae2435" style={{marginRight:25,fontSize:35,cursor:'pointer'}}/>
                                 <FontAwesomeIcon icon={faDonate} color="#ffe400" style={{marginRight:25,fontSize:35,cursor:'pointer'}}/>
@@ -36,6 +36,13 @@ export default class Privado extends Component {
                             </div>
                         </div>
                         
+                    </div>
+                
+                    <div className="btnsAction">
+                        <FontAwesomeIcon icon={faWallet} color="#ffe400" style={{marginRight:25,fontSize:35,cursor:'pointer'}}/>
+                        <FontAwesomeIcon icon={faGift} color="#ae2435" style={{marginRight:25,fontSize:35,cursor:'pointer'}}/>
+                        <FontAwesomeIcon icon={faDonate} color="#ffe400" style={{marginRight:25,fontSize:35,cursor:'pointer'}}/>
+                        <div className="comprarCredito">Comprar Crédito</div>
                     </div>
                     <Chatprivado/>
                 </Container>

@@ -1,0 +1,45 @@
+/* Position and sizing of burger button */
+
+  
+  
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    z-index: 9999999 !important;
+    margin-top: -65px;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: #380a10;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    width: 250px !important;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #380a10;
+    right: 60px !important;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #ffffff !important;
+    padding: 0.8em;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: -70px !important;
+  }

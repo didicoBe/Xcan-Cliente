@@ -12,12 +12,40 @@ import './style.css'
 export default class Perfil extends Component {
 
     state={
-        perfil:this.props.match.params.nome
+        perfil:this.props.match.params.nome,
+        dadosPerfil : {
+                nome:'Garota1',
+                imgPerfil:'/img/perfil.jpg',
+                fotos:[
+                    {
+                        img:'/img/imgBlock.jpg'
+                    },
+                    {
+                        img:'/img/imgBlock.jpg'
+                    },
+                    {
+                        img:'/img/imgBlock.jpg'
+                    },
+                    {
+                        img:'/img/imgBlock.jpg'
+                    }
+                ],
+                videos:[
+                    {link:'/img/videoBlock.jpg'},
+                    {link:'/img/videoBlock.jpg'},
+                    {link:'/img/videoBlock.jpg'},
+                    {link:'/img/videoBlock.jpg'},
+                    {link:'/img/videoBlock.jpg'},
+                    {link:'/img/videoBlock.jpg'},
+                    {link:'/img/videoBlock.jpg'}
+                ],
+                LinkchatPrivado:'123'
+            }
     }
 
     vaiPrivado = ()=>{
        
-        this.props.history.push("/privado/1");
+        this.props.history.push("/privado/"+this.state.dadosPerfil.LinkchatPrivado);
     }
 
 
@@ -92,50 +120,31 @@ export default class Perfil extends Component {
                     {/* fotos */}
                     <div className="subtituloPerfil">Fotos</div>
                     <Row className="estiloLateral" >
-                        <Col md={3} sm={6}>
-                            <div style={{color:'#fff',marginBottom:20}}>
-                                <Image src='/img/imgBlock.jpg' fluid />
-                            </div>
-                        </Col>
-                        <Col md={3} sm={6}>
-                            <div style={{color:'#fff',marginBottom:20}}>
-                                <Image src='/img/imgBlock.jpg' fluid />
-                            </div>
-                        </Col>
-                        <Col md={3} sm={6}>
-                            <div style={{color:'#fff',marginBottom:20}}>
-                                <Image src='/img/imgBlock.jpg' fluid />
-                            </div>
-                        </Col>
-                        <Col md={3} sm={6}>
-                            <div style={{color:'#fff',marginBottom:20}}>
-                                <Image src='/img/imgBlock.jpg' fluid />
-                            </div>
-                        </Col>
+                        {this.state.dadosPerfil.fotos.map((dados,i)=>{
+                            return(
+                                <Col md={3} sm={6} key={i}>
+                                    <div style={{color:'#fff',marginBottom:20}}>
+                                        <Image src={dados.img} fluid />
+                                    </div>
+                                </Col>   
+                            )
+                        })}
                     </Row>
+
+
                     {/* videos */}
                     <div className="subtituloPerfil">Videos</div>
                     <Row className="estiloLateral" >
-                        <Col md={3}>
-                            <div style={{color:'#fff',marginBottom:20}}>
-                                <Image src='/img/videoBlock.jpg' fluid />
-                            </div>
-                        </Col>
-                        <Col md={3}>
-                            <div style={{color:'#fff',marginBottom:20}}>
-                                <Image src='/img/videoBlock.jpg' fluid />
-                            </div>
-                        </Col>
-                        <Col md={3}>
-                            <div style={{color:'#fff',marginBottom:20}}>
-                                <Image src='/img/videoBlock.jpg' fluid />
-                            </div>
-                        </Col>
-                        <Col md={3}>
-                            <div style={{color:'#fff',marginBottom:20}}>
-                                <Image src='/img/videoBlock.jpg' fluid />
-                            </div>
-                        </Col>
+                        {this.state.dadosPerfil.videos.map((dados,i)=>{
+                            return(
+                                <Col md={3} sm={6} key={i}>
+                                    <div style={{color:'#fff',marginBottom:20}}>
+                                        <Image src={dados.link} fluid />
+                                    </div>
+                                </Col>   
+                            )
+                        })}
+                        
                     </Row>
                 </Container>
                 
